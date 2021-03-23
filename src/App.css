@@ -1,12 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  transition: all 0.5s linear;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+  background-color: #322e31!important
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 600;
+}
+
 .App {
-  text-align: center;
+  background-color: #322e31;;
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  overflow: hidden;
+  font-size: 1.1rem;
+  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.hide {display: none;}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -28,11 +86,530 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ .h2pad {padding-bottom: 60px;}
+
+.container {
+  padding: 85px 0;
+}
+a:hover {
+  text-decoration: none!important
+}
+.navResponse a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0px 10px;
+}
+.navResponse a:hover {
+  color: #7856ff;
+}
+
+
+.head {
+  background-image: url('./img/bd1.svg');
+  background-size: cover;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 2.2rem;
+}
+
+.logoText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2pt;
+}
+
+
+.headcomp {
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+}
+.headerBlock {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headerContainer {padding: 0px;}
+
+.headerBlock h1 {
+  font-size: 3.3rem;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.headerBlock p {padding-bottom: 30px;}
+
+.coursesBlock { 
+  background-color: #7856ff;
+}
+.navBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding: 20px;
+}
+.navResponse {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.navResponse ul {display: flex; align-items: center; margin: auto;}
+.navResponse ul li {  padding: 0 10px;}
+.navResponse button {align-self: end;}
+
+.logoBox {display: flex; align-items: center;}
+
+.burger {
+  position: absolute;
+  right: 22px;
+  top: 27px;
+  display: none;
+  z-index: 910;
+}
+
+/* .coursesRow {
+  padding: 85px 0;
+} */
+
+.coureseCard {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+
+}
+.coureseCardImg {
+  background-color: #322e31;
+  min-height: 230px;
+  
+  background-size: cover;
+  border-radius: 5px 5px 0 0
+}
+
+.coureseBasic {
+  background-image: url('./img/cours-pic1.png');
+}
+.couresePython {
+  background-image: url('./img/cours-pic3.png');
+}
+.coureseScratch {
+  background-image: url('./img/cours-pic2.png');
+}
+.coureseSummer {
+  background-image: url('./img/cours-pic4.png');
+}
+.coureseCardContent {
+  padding: 15px;
+}
+
+.CardHeader, .CardYears, .methodBoxHeader {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 15px 0;
+}
+.CardText {
+  font-size: 1rem;
+}
+.CardYears {color: #f1c72f; }
+.CardButton button {
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-weight: 600;
+  background-color: #7856ff;
+}
+.bigBtn {
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-weight: 600;
+  background-color: #7856ff;
+  color: #fff;
+  border: none;
+}
+.smallBtn {
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #f1c72f;
+  font-weight: 500;
+  color: #000;
+  border: 0px;
+}
+.smallBtn:hover{
+  background-color: #dfb41a;
+}
+.bigBtn:hover {
+  background-color: #6741fa;
+}
+
+.swiper-container {
+  width: 480px;
+}
+.sloganBox {
+  display: flex;
+  align-items: center;
+}
+.sloganImg::after {
+  content: '';
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  width: 25%;
+  height: 30%;
+  background-image: url('./img/slogan-img-lamp.svg');
+  background-repeat: no-repeat;
+  animation: sloga-idea infinite 5s linear;
+}
+@keyframes sloga-idea {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg)
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translate(0px, 10px) rotate(10deg)
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg)
   }
 }
+
+.head-title-h2, .number-title-h2, .courses-title-h2 {
+  font-size: 3.3rem;
+  font-weight: 600;
+}
+.courses-title-h2 {text-align: center;}
+
+.description-title-p {
+line-height: 2.2rem;
+padding-top: 15px;
+}
+
+.sloganTextspan {
+  color:#7856ff;
+  padding-left: 8px;
+}
+.sloganText {
+  position: relative;
+}
+
+.methodCont {
+  border: #f1c72f 2px solid;
+  border-radius: 10px;
+  padding: 20px 40px 40px;
+  margin: 15px 0;
+  min-height: 400px;
+}
+
+.methodBox {padding: 85px 0 0 0;}
+
+
+.methodBoxIcon {
+  font-size: 3rem;
+  text-align: center;
+  color: #f1c72f;
+}
+
+.countBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  
+}
+.countText {
+  font-size: 2.8rem;
+
+  margin-top: -10px;
+}
+
+.number {
+  background-image: url('./img/bd-count.svg');
+  background-size: cover;
+  position: relative;
+}
+
+.number-title-h2 {
+  text-align: center;
+ 
+}
+
+.count {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #F1C730;
+}
+.review {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+
+}
+.review-text {
+  height: 100%;
+}
+
+.reviewPerson {
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+}
+
+.reviewPersonAvatar img {
+  width: 100px;
+  border-radius: 50px;
+}
+.reviewPersonInfo {
+  padding-left: 15px;
+}
+
+.footerBox {
+  margin-top: 15px;
+}
+
+.footLogo {
+  font-size: 7rem;
+  padding-bottom: 10px;
+}
+.footmail a{
+color: white;
+text-decoration: none;
+}
+.footTitle {
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+}
+.footUl li {
+  padding: 3px 0;
+  color:darkgrey
+}
+
+.CoursBoxContainer {
+  padding: 0;
+  /* height: 100vh; */
+  
+}
+
+.closeIcon {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  right: 22px;
+  top: 27px;
+}
+.closeIcon:hover {
+  color: #6741fa;
+  transform: rotate(90deg);
+
+}
+
+.aboutCours {
+  background-color: #7856ff;
+}
+
+.abCourseTitle {
+  font-weight: 600;
+  padding: 35px 0;
+  font-size: 3.3rem;
+  text-align: center;
+}
+.descriptionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.abCourseDescr {
+  width: 60%;
+
+}
+
+
+.abCourseUl {
+  align-items: center;
+}
+.abCourseUl li{
+
+}
+.abNumlesson{
+  /* border: #f1c72f 2px solid; */
+  border-radius: 10px;
+  padding: 40px 20px 20px;
+  margin: 15px 0;
+  /* margin-right: 15px; */
+  position: relative;
+}
+.abNumlesson {
+  text-align: center;
+  font-weight: 600;
+}
+.abNum {
+  border: #f1c72f 2px solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  margin-right: 15px;
+  position: relative;
+}
+.num-Icon {
+  color: #f1c72f;
+  font-size: 35px;
+  padding-bottom: 25px;
+}
+.abNum:last-child {
+
+  margin-right: 0px;
+}
+.co-button {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+
+.btnForm, .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(161,21,207, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 9000;
+  color: #000;
+  text-align: center;
+}
+.formClose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.btnFormBox {    
+  max-width: 400px;
+  padding: 25px 40px;
+  margin: auto;
+  background: #fff;
+  transform: translateY(30%);
+  position: relative;
+}
+.form-control {
+  margin: 25px 0;
+}
+
+.fa-times:hover{
+  color: #f1c72f;
+
+}
+@media screen and (max-width: 900px) {
+  .navResponse.responsive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #6741fa;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+    }
+    .responsive ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+    .responsive ul li {
+      padding: 10px;
+      font-size: 2rem;
+    }
+    .navResponse {display: none;}
+    .burger {
+      display: block;
+      position: fixed;
+    }
+
+  .smallBtn {padding: 20px 30px; }
+
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+  .swiper-container {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .swiper-container {
+    width: 1140px;
+  }
+} 
+@media screen and (max-width:768px) {
+
+  .count {
+    font-size: 2.6rem;}
+  .countText {
+      font-size: 1.6rem;}
+
+  .abCourseDescr {
+        width: 100%;
+    } 
+}
+@media screen and (max-width:992px) {
+  .methodCont {
+    min-height: 100px;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .headerBlock h1 {
+      font-size: 2.5rem;
+  }
+
+  .myImage {
+      width: 100%;
+  } 
+  .container {
+    padding: 25px 0;
+  }
+  .h2pad {padding-bottom: 25px;}
+
+  .head-title-h2, .number-title-h2, .courses-title-h2 {
+    font-size: 2.2rem;
+ 
+  }
+  .count {
+    font-size: 2.2rem;}
+
+  .popup {height: 100vh;}
+  .btnFormBox {    
+    max-width: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}
+
+    .methodCont {
+ 
+      min-height: none;
+    }
+}
+
